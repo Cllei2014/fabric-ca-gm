@@ -367,6 +367,7 @@ func (ca *CA) getCACert() (cert []byte, err error) {
 			SerialNumber: csr.SerialNumber,
 		}
 		log.Debugf("Root CA certificate request: %+v", req)
+		//TODO: matrix remove key
 		// Generate the key/signer
 		key, cspSigner, err := util.BCCSPKeyRequestGenerate(&req, ca.csp)
 		if err != nil {

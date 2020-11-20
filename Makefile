@@ -69,6 +69,7 @@ RELEASE_PKGS = fabric-ca-client
 
 path-map.fabric-ca-client := cmd/fabric-ca-client
 path-map.fabric-ca-server := cmd/fabric-ca-server
+path-map.fabric-ca-zh := cmd/fabric-ca-zh
 
 include docker-env.mk
 
@@ -111,6 +112,7 @@ docs: fabric-ca-client fabric-ca-server
 
 fabric-ca-client: bin/fabric-ca-client
 fabric-ca-server: bin/fabric-ca-server
+fabric-ca-zh: bin/fabric-ca-zh
 
 bin/%: $(GO_SOURCE)
 	@echo "Building ${@F} in bin directory ..."
@@ -242,7 +244,7 @@ docker-list: $(patsubst %,%-docker-list, $(IMAGES))
 docker-clean: $(patsubst %,%-docker-clean, $(IMAGES) $(PROJECT_NAME)-fvt)
 	@rm -rf build/docker/bin/* vendor ||:
 
-native: fabric-ca-client fabric-ca-server clean-vendor
+native: fabric-ca-client fabric-ca-server fabric-ca-zh clean-vendor
 
 release: $(patsubst %,release/%, $(MARCH))
 release-all: $(patsubst %,release/%, $(RELEASE_PLATFORMS))
