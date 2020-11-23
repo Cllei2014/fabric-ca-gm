@@ -22,13 +22,13 @@ func appendIfNotEmpty(s string, a *[]string) {
 	}
 }
 
-func newCsr(subj, keyID string) error {
+func newCsrTemplate(subj string) (*x509GM.CertificateRequest, error) {
 	var name pkix.Name
 
 	fields := strings.Split(subj, "/")
 
 	if len(fields) == 0 {
-		return errors.New(subjectFormatError)
+		return nil, errors.New(subjectFormatError)
 	}
 
 	for _, field := range fields {
@@ -36,7 +36,7 @@ func newCsr(subj, keyID string) error {
 		if len(subFields) == 1 {
 			continue
 		} else if len(subFields) != 2 {
-			return errors.New(subjectFormatError)
+			return nil, errors.New(subjectFormatError)
 		}
 
 		switch strings.ToUpper(strings.TrimSpace(subFields[0])) {
@@ -61,7 +61,7 @@ func newCsr(subj, keyID string) error {
 
 	basicConstraints, err := asn1.Marshal(csr.BasicConstraints{IsCA: true, MaxPathLen: -1})
 	if err != nil {
-		return err
+		return nil, err
 	}
 
 	extensions = append(extensions, pkix.Extension{
@@ -70,15 +70,20 @@ func newCsr(subj, keyID string) error {
 		Critical: true,
 	})
 
-	csrTemplate := &x509GM.CertificateRequest{
+	return &x509GM.CertificateRequest{
 		Subject:            name,
 		SignatureAlgorithm: x509GM.SM2WithSM3,
 		PublicKeyAlgorithm: x509GM.SM2,
 		Extensions:         extensions,
-		// fields below are all dns alternate names
-		//IPAddresses:        []net.IP{net.ParseIP("127.0.0.1")},
-		//DNSNames:           []string{"example.org.com"},
-		//EmailAddresses:     []string{"foo@bar.com"},
+
+	}, nil
+}
+
+func newCsr(subj, keyID string) error {
+
+	csrTemp, err := newCsrTemplate(subj)
+	if err != nil {
+		return err
 	}
 
 	sm2Adapter, err := kms.CreateSm2KeyAdapter(keyID, kms.SignAndVerify)
@@ -91,7 +96,7 @@ func newCsr(subj, keyID string) error {
 		return err
 	}
 
-	csrPem, err := x509GM.CreateCertificateRequestToPem(csrTemplate, cryptoSigner)
+	csrPem, err := x509GM.CreateCertificateRequestToPem(csrTemp, cryptoSigner)
 	if err != nil {
 		return err
 	}
