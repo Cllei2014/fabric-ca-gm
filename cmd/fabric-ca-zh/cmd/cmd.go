@@ -1,14 +1,15 @@
 package cmd
 
 import (
+	"fmt"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
 
 const (
-	longName   = "Hyperledger Fabric Zhong Huan Certificate Authority Tool"
-	shortName  = "fabric-ca-zh"
-	cmdName    = "fabric-ca-zh"
+	longName  = "Hyperledger Fabric Zhong Huan Certificate Authority Tool"
+	shortName = "fabric-ca-zh"
+	cmdName   = "fabric-ca-zh"
 )
 
 type Command struct {
@@ -33,8 +34,13 @@ func (cmd *Command) init() {
 		Long:  longName,
 	}
 	cmd.rootCmd.AddCommand(NewCsrCmd())
+	cmd.rootCmd.AddCommand(NewICACmd())
 }
 
 func (cmd *Command) Execute() error {
 	return cmd.rootCmd.Execute()
+}
+
+func printOutput(keyID, output string) {
+	fmt.Printf("-----BEGIN KEY ID-----\n%s\n-----END KEY ID-----\n\n%s", keyID, output)
 }

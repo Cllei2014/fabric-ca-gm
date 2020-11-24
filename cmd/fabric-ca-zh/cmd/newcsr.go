@@ -3,12 +3,12 @@ package cmd
 import (
 	"crypto/x509/pkix"
 	"encoding/asn1"
-	"fmt"
-	"github.com/cloudflare/cfssl/csr"
-	"github.com/google/certificate-transparency-go/x509"
+	"github.com/Hyperledger-TWGC/tjfoc-gm/sm2"
 	"strings"
 
 	x509GM "github.com/Hyperledger-TWGC/tjfoc-gm/x509"
+	"github.com/cloudflare/cfssl/csr"
+	"github.com/google/certificate-transparency-go/x509"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 	kms "github.com/tw-bc-group/aliyun-kms/sm2"
@@ -22,7 +22,7 @@ func appendIfNotEmpty(s string, a *[]string) {
 	}
 }
 
-func newCsrTemplate(subj string) (*x509GM.CertificateRequest, error) {
+func NewCsrTemplate(subj string, publicKey *sm2.PublicKey) (*x509GM.CertificateRequest, error) {
 	var name pkix.Name
 
 	fields := strings.Split(subj, "/")
@@ -58,7 +58,6 @@ func newCsrTemplate(subj string) (*x509GM.CertificateRequest, error) {
 	}
 
 	extensions := make([]pkix.Extension, 8)
-
 	basicConstraints, err := asn1.Marshal(csr.BasicConstraints{IsCA: true, MaxPathLen: -1})
 	if err != nil {
 		return nil, err
@@ -74,24 +73,29 @@ func newCsrTemplate(subj string) (*x509GM.CertificateRequest, error) {
 		Subject:            name,
 		SignatureAlgorithm: x509GM.SM2WithSM3,
 		PublicKeyAlgorithm: x509GM.SM2,
+		PublicKey:          publicKey,
 		Extensions:         extensions,
-
 	}, nil
 }
 
 func newCsr(subj, keyID string) error {
 
-	csrTemp, err := newCsrTemplate(subj)
+	keyAdapter, err := kms.CreateSm2KeyAdapter(keyID, kms.SignAndVerify)
 	if err != nil {
 		return err
 	}
 
-	sm2Adapter, err := kms.CreateSm2KeyAdapter(keyID, kms.SignAndVerify)
+	pubKey, err := keyAdapter.GetPublicKey()
 	if err != nil {
 		return err
 	}
 
-	cryptoSigner, err := sm2Adapter.TryIntoCryptoSigner()
+	csrTemp, err := NewCsrTemplate(subj, pubKey)
+	if err != nil {
+		return err
+	}
+
+	cryptoSigner, err := keyAdapter.TryIntoCryptoSigner()
 	if err != nil {
 		return err
 	}
@@ -101,23 +105,25 @@ func newCsr(subj, keyID string) error {
 		return err
 	}
 
-	fmt.Printf("-----BEGIN KEY ID-----\n%s\n-----END KEY ID-----\n\n%s", sm2Adapter.KeyID(), string(csrPem))
-
+	printOutput(keyAdapter.KeyID(), string(csrPem))
 	return nil
 }
 
 func NewCsrCmd() *cobra.Command {
+	var subj, keyID string
+
 	csrCmd := &cobra.Command{
 		Use:   "newcsr",
 		Short: "Generate new csr file",
 		Long:  "Generate new zhong huan ica csr file",
 	}
-	var subj, keyID string
+
 	csrCmd.Flags().StringVarP(&subj, "subj", "s", "", "设置 CSR 请求中的 Subject 字段（必选）")
 	_ = csrCmd.MarkFlagRequired("subj")
 	csrCmd.Flags().StringVarP(&keyID, "key", "k", "", "设置使用的 KMS 密钥 ID（可选）")
 	csrCmd.RunE = func(cmd *cobra.Command, args []string) error {
 		return newCsr(subj, keyID)
 	}
+
 	return csrCmd
 }
