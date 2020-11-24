@@ -23,6 +23,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
+//签发证书有效期参数
 const oneYearHours = 8760
 
 type subjectPublicKeyInfo struct {
@@ -78,6 +79,7 @@ func newICATemplate(subj string, publicKey *sm2.PublicKey) (*x509GM.Certificate,
 		PublicKey:          csrTemp.PublicKey,
 		PublicKeyAlgorithm: csrTemp.PublicKeyAlgorithm,
 		SignatureAlgorithm: csrTemp.SignatureAlgorithm,
+		//以下参数设置域名参数，目前忽略
 		DNSNames:           csrTemp.DNSNames,
 		IPAddresses:        csrTemp.IPAddresses,
 		EmailAddresses:     csrTemp.EmailAddresses,
@@ -112,6 +114,7 @@ func newICATemplate(subj string, publicKey *sm2.PublicKey) (*x509GM.Certificate,
 		return nil, err
 	}
 
+	// make sure not negative
 	serialNumber[0] &= 0x7F
 	icaTemp.SerialNumber = new(big.Int).SetBytes(serialNumber)
 
