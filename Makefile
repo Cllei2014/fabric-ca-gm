@@ -156,10 +156,12 @@ build/image/%/$(DUMMY): Makefile build/image/%/payload
 build/image/fabric-ca-gm/payload: \
 	build/docker/bin/fabric-ca-client \
 	build/docker/bin/fabric-ca-server \
+	build/docker/bin/fabric-ca-zh \
 	build/fabric-ca.tar.bz2
 build/image/fabric-ca-fvt/payload: \
 	build/docker/bin/fabric-ca-client \
 	build/docker/bin/fabric-ca-server \
+	build/docker/bin/fabric-ca-zh \
 	build/fabric-ca-fvt.tar.bz2
 build/image/%/payload:
 	@echo "Copying $^ to $@"
