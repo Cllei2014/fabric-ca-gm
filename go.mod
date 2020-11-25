@@ -52,3 +52,7 @@ require (
 )
 
 replace github.com/Hyperledger-TWGC/tjfoc-gm v0.0.0-20201117155542-9542a21fafd1 => github.com/tw-bc-group/tjfoc-gm v0.0.0-20201124022249-edd640b7bf9f
+
+replace github.com/tw-bc-group/fabric-gm v0.0.0-20201120080309-eb546e19c6ca => ../fabric-gm
+
+replace github.com/tw-bc-group/aliyun-kms v0.0.0-20201120104640-a264dd746212 => ../aliyun-kms

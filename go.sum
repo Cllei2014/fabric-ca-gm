@@ -162,6 +162,7 @@ github.com/mattn/go-isatty v0.0.11/go.mod h1:PhnuNfih5lzO57/f3n+odYbM4JtupLOxQOA
 github.com/mattn/go-isatty v0.0.12/go.mod h1:cbi8OIDigv2wuxKPP5vlRcQ1OAZbq2CE4Kysco4FUpU=
 github.com/mattn/go-runewidth v0.0.2/go.mod h1:LwmH8dsx7+W8Uxz3IHJYH5QSwggIsqBzpuz5H//U1FU=
 github.com/mattn/go-runewidth v0.0.3/go.mod h1:LwmH8dsx7+W8Uxz3IHJYH5QSwggIsqBzpuz5H//U1FU=
+github.com/mattn/go-sqlite3 v1.14.5/go.mod h1:WVKg1VTActs4Qso6iwGbiFih2UIHo0ENGwNd0Lj+XmI=
 github.com/mattn/go-sqlite3 v2.0.3+incompatible h1:gXHsfypPkaMZrKbD5209QV9jbUTJKjyR5WD3HYQSd+U=
 github.com/mattn/go-sqlite3 v2.0.3+incompatible/go.mod h1:FPy6KqzDD04eiIsT53CuJW3U88zkxoIYsOqkbpncsNc=
 github.com/matttproud/golang_protobuf_extensions v1.0.0/go.mod h1:D8He9yQNgCq6Z5Ld7szi9bcBfOoFv/3dc6xSMkL2PC0=
@@ -271,6 +272,8 @@ github.com/tw-bc-group/aliyun-kms v0.0.0-20201120104640-a264dd746212 h1:DvJdpKXP
 github.com/tw-bc-group/aliyun-kms v0.0.0-20201120104640-a264dd746212/go.mod h1:GONQ2w384Dql01scA2vMwBv+9Vw/RIQRy2sCuAoLQ6k=
 github.com/tw-bc-group/fabric-gm v0.0.0-20201120080309-eb546e19c6ca h1:hvqG96xMvkFyY7LDiJEy70ameJvBrD1H7XLbMccSKss=
 github.com/tw-bc-group/fabric-gm v0.0.0-20201120080309-eb546e19c6ca/go.mod h1:7C774tGXUwGxjOcfy1v1qlCJJ0cfy7ANeCsMPov1zSQ=
+github.com/tw-bc-group/mock-collaborative-encryption-lib v0.0.0-20201123032157-5c20ec7f3bc3 h1:4uVZFSCvi3c2lFQHJlN/UX/kab/h3SxR76mhmF5KAfY=
+github.com/tw-bc-group/mock-collaborative-encryption-lib v0.0.0-20201123032157-5c20ec7f3bc3/go.mod h1:QjkvRTkEeA1M6aov0ffiB++nduvJDmKhZAzIwLhGKs8=
 github.com/tw-bc-group/net-go-gm v0.0.0-20201029102405-17a5e22cadaa h1:fCeVBt9bkKzOejVk+1TEIgluFyuKSmLoFR7jH5L+QXo=
 github.com/tw-bc-group/net-go-gm v0.0.0-20201029102405-17a5e22cadaa/go.mod h1:2oAK+CcT1dFBZ+8KVNJdBUbrcGo2+eniuu24WBQt5JU=
 github.com/tw-bc-group/sarama v0.0.0-20201110085058-851d51e29742/go.mod h1:L/DCuMbRNYoj2JksrP2UJRTTsLdktr58Q9pIgNmH8cA=
