@@ -85,22 +85,14 @@ func newCsr(subj, keyID string) error {
 		return err
 	}
 
-	pubKey, err := keyAdapter.GetPublicKey()
-	if err != nil {
-		return err
-	}
+	pubKey := keyAdapter.PublicKey()
 
 	csrTemp, err := NewCsrTemplate(subj, pubKey)
 	if err != nil {
 		return err
 	}
 
-	cryptoSigner, err := keyAdapter.TryIntoCryptoSigner()
-	if err != nil {
-		return err
-	}
-
-	csrPem, err := x509GM.CreateCertificateRequestToPem(csrTemp, cryptoSigner)
+	csrPem, err := x509GM.CreateCertificateRequestToPem(csrTemp, keyAdapter)
 	if err != nil {
 		return err
 	}

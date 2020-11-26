@@ -80,9 +80,9 @@ func newICATemplate(subj string, publicKey *sm2.PublicKey) (*x509GM.Certificate,
 		PublicKeyAlgorithm: csrTemp.PublicKeyAlgorithm,
 		SignatureAlgorithm: csrTemp.SignatureAlgorithm,
 		//以下参数设置域名参数，目前忽略
-		DNSNames:           csrTemp.DNSNames,
-		IPAddresses:        csrTemp.IPAddresses,
-		EmailAddresses:     csrTemp.EmailAddresses,
+		DNSNames:       csrTemp.DNSNames,
+		IPAddresses:    csrTemp.IPAddresses,
+		EmailAddresses: csrTemp.EmailAddresses,
 	}
 
 	oneYear, err := time.ParseDuration(fmt.Sprintf("%dh", oneYearHours))
@@ -157,10 +157,7 @@ func newICA(subj, parentCAPath, parentKeyID, keyID string) error {
 		return err
 	}
 
-	publicKey, err := keyAdapter.GetPublicKey()
-	if err != nil {
-		return err
-	}
+	publicKey := keyAdapter.PublicKey()
 
 	icaTemp, err := newICATemplate(subj, publicKey)
 	if err != nil {
@@ -172,12 +169,7 @@ func newICA(subj, parentCAPath, parentKeyID, keyID string) error {
 		return err
 	}
 
-	signer, err := parentKeyAdapter.TryIntoCryptoSigner()
-	if err != nil {
-		return err
-	}
-
-	certPem, err := x509GM.CreateCertificateToPem(icaTemp, parentCA, publicKey, signer)
+	certPem, err := x509GM.CreateCertificateToPem(icaTemp, parentCA, publicKey, parentKeyAdapter)
 	if err != nil {
 		return err
 	}

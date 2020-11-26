@@ -1210,7 +1210,7 @@ func validateMatchingKeys(cert *x509.Certificate, keyFile string) error {
 					return err
 				}
 
-				sm2PubKey, err := keyAdapter.GetPublicKey()
+				sm2PubKey := keyAdapter.PublicKey()
 				if err != nil {
 					return err
 				}
