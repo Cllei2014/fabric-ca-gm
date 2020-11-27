@@ -154,8 +154,9 @@ func getBCCSPKeyOpts(kr csr.KeyRequest, ephemeral bool) (opts bccsp.KeyGenOpts, 
 	case "gmsm2":
 		if os.Getenv("CA_GM_PROVIDER") == "ALIYUN_KMS" {
 			return &bccsp.KMSGMSM2KeyGenOpts{Temporary: ephemeral}, nil
+		} else if os.Getenv("CA_GM_PROVIDER") == "ZH" {
+			return &bccsp.ZHGMSM2KeyGenOpts{Temporary: ephemeral}, nil
 		} else {
-
 			return &bccsp.GMSM2KeyGenOpts{Temporary: ephemeral}, nil
 		}
 	default:
