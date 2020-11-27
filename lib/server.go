@@ -863,6 +863,9 @@ func (s *Server) autoGenerateTLSCertificateKey() error {
 	hostname := util.Hostname()
 	log.Debugf("TLS CSR: %+v\n", csrReq)
 
+	// make sure the tls certificate is use gmsm2_ce private key
+	csrReq.KeyRequest.Algo = "gmsm2_ce"
+
 	// Can't use the same CN as the signing certificate CN (default: fabric-ca-server) otherwise no AKI is generated
 	csr, _, cryptoSigner, err := client.GenCSR(&csrReq, hostname)
 	if err != nil {
