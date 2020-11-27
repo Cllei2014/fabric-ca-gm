@@ -266,6 +266,8 @@ github.com/tw-bc-group/aliyun-kms v0.0.0-20201126132256-b9c99bba772d h1:r6OsvTtW
 github.com/tw-bc-group/aliyun-kms v0.0.0-20201126132256-b9c99bba772d/go.mod h1:GONQ2w384Dql01scA2vMwBv+9Vw/RIQRy2sCuAoLQ6k=
 github.com/tw-bc-group/fabric-gm v0.0.0-20201127051422-8bd4fcb4a024 h1:hDIj8KakpgXYq9ypCNCR7bx+Uu+ugo649e2GdvwJrqA=
 github.com/tw-bc-group/fabric-gm v0.0.0-20201127051422-8bd4fcb4a024/go.mod h1:fZGmAhFrHdvS8Yckxn9t3lNlle3pwiWeq+3PZnaq0dg=
+github.com/tw-bc-group/fabric-gm v0.0.0-zh-01 h1:uFHkwjpGc87OztqHcMYKJ0nEbk2fYMqI+Bni3mh/VgM=
+github.com/tw-bc-group/fabric-gm v0.0.0-zh-01/go.mod h1:gVSXuNK66WZ256iEWFojpt1WewMMFOxRCFUmfIqAAqI=
 github.com/tw-bc-group/mock-collaborative-encryption-lib v0.0.0-mock-1 h1:FTHjjM6ofD2lEqvMhGx0FH6mlhWUkllKvkOHKeWntA0=
 github.com/tw-bc-group/mock-collaborative-encryption-lib v0.0.0-mock-1/go.mod h1:lGHcrM+KFHJgAojqlTSag3VVWov0kZlfS/mnVea9l3o=
 github.com/tw-bc-group/net-go-gm v0.0.0-20201029102405-17a5e22cadaa h1:fCeVBt9bkKzOejVk+1TEIgluFyuKSmLoFR7jH5L+QXo=
@@ -273,6 +275,8 @@ github.com/tw-bc-group/net-go-gm v0.0.0-20201029102405-17a5e22cadaa/go.mod h1:2o
 github.com/tw-bc-group/sarama v0.0.0-20201110085058-851d51e29742/go.mod h1:L/DCuMbRNYoj2JksrP2UJRTTsLdktr58Q9pIgNmH8cA=
 github.com/tw-bc-group/tjfoc-gm v0.0.0-20201126034628-7141b2053e0e h1:Y+Ch19lrgdZnADGqCF1ltJtdzDY7Mq9drZFKFLi+dUQ=
 github.com/tw-bc-group/tjfoc-gm v0.0.0-20201126034628-7141b2053e0e/go.mod h1:pjo29FaEP0cii6emm2Lw/+3UZxO2SGQrUXntmKUD37U=
+github.com/tw-bc-group/zhonghuan-ce v0.1.0-hotfix-01 h1:QWkMvcZJReyqGTR4Hhas+ieMKEh1YoFBEenYqwOfBmQ=
+github.com/tw-bc-group/zhonghuan-ce v0.1.0-hotfix-01/go.mod h1:24e7E3Zec5CBPFyHRtRlvWdNxCZIEvox/g3VZuOLsZk=
 github.com/ugorji/go v1.1.1/go.mod h1:hnLbHMwcvSihnDhEfx2/BzKp2xb0Y+ErdfYcrs9tkJQ=
 github.com/urfave/cli v1.18.0/go.mod h1:70zkFmudgCuE/ngEzBv17Jvp/497gISqfk5gWijbERA=
 github.com/vishvananda/netlink v1.0.0/go.mod h1:+SR5DhBJrl6ZM7CoCKvpw5BKroDKQ+PJqOg65H/2ktk=
