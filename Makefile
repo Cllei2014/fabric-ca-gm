@@ -250,7 +250,7 @@ docker-list: $(patsubst %,%-docker-list, $(IMAGES))
 docker-clean: $(patsubst %,%-docker-clean, $(IMAGES) $(PROJECT_NAME)-fvt)
 	@rm -rf build/docker/bin/* vendor ||:
 
-native: fabric-ca-client fabric-ca-server fabric-ca-zh clean-vendor
+native: clean-vendor fabric-ca-client fabric-ca-server fabric-ca-zh
 
 release: $(patsubst %,release/%, $(MARCH))
 release-all: $(patsubst %,release/%, $(RELEASE_PLATFORMS))
@@ -304,6 +304,7 @@ dist/linux-s390x:
 
 .PHONY: clean-vendor
 clean-vendor:
+	@echo "clean vendor..."
 	@rm -rf vendor
 
 .PHONY: clean
