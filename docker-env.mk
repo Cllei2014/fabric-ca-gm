@@ -62,6 +62,8 @@ else
 DOCKER_GO_LDFLAGS += -linkmode external -extldflags '-static -lpthread'
 endif
 
+DOCKER_GO_LDFLAGS += '-extldflags=-L/usr/lib'
+
 #
 # What is a .dummy file?
 #
