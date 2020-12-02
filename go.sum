@@ -264,8 +264,6 @@ github.com/tedsuo/ifrit v0.0.0-20180802180643-bea94bb476cc/go.mod h1:eyZnKCc955u
 github.com/tmc/grpc-websocket-proxy v0.0.0-20170815181823-89b8d40f7ca8/go.mod h1:ncp9v5uamzpCO7NfCPTXjqaC+bZgJeR0sMTm6dMHP7U=
 github.com/tw-bc-group/aliyun-kms v0.0.0-20201126132256-b9c99bba772d h1:r6OsvTtWJ2b9TJ+YSzskl7EtrKbSiN/q/p78zaSv4Jc=
 github.com/tw-bc-group/aliyun-kms v0.0.0-20201126132256-b9c99bba772d/go.mod h1:GONQ2w384Dql01scA2vMwBv+9Vw/RIQRy2sCuAoLQ6k=
-github.com/tw-bc-group/fabric-gm v0.0.0-20201202032315-0addeed06961 h1:ifAAWhcd2u2jpa11hLh3pkT/aw3Hp+bXV+YoeR4yKME=
-github.com/tw-bc-group/fabric-gm v0.0.0-20201202032315-0addeed06961/go.mod h1:9wfH4sdMdt98WnLA6jrCZrLIbf4tpbYMAOk0ZEmol+A=
 github.com/tw-bc-group/fabric-gm v0.0.0-20201202033848-ff55158d018e h1:kVvAloFnK3cBhVVTslP5JpdaBubFBUvMIvZUJCwAQpg=
 github.com/tw-bc-group/fabric-gm v0.0.0-20201202033848-ff55158d018e/go.mod h1:eTZjDqH+smLk7ucYWbfgWr/Gqbdxw/ikN6QZcJr8/FQ=
 github.com/tw-bc-group/net-go-gm v0.0.0-20201029102405-17a5e22cadaa h1:fCeVBt9bkKzOejVk+1TEIgluFyuKSmLoFR7jH5L+QXo=
@@ -273,8 +271,6 @@ github.com/tw-bc-group/net-go-gm v0.0.0-20201029102405-17a5e22cadaa/go.mod h1:2o
 github.com/tw-bc-group/sarama v0.0.0-20201110085058-851d51e29742/go.mod h1:L/DCuMbRNYoj2JksrP2UJRTTsLdktr58Q9pIgNmH8cA=
 github.com/tw-bc-group/tjfoc-gm v0.0.0-20201126034628-7141b2053e0e h1:Y+Ch19lrgdZnADGqCF1ltJtdzDY7Mq9drZFKFLi+dUQ=
 github.com/tw-bc-group/tjfoc-gm v0.0.0-20201126034628-7141b2053e0e/go.mod h1:pjo29FaEP0cii6emm2Lw/+3UZxO2SGQrUXntmKUD37U=
-github.com/tw-bc-group/zhonghuan-ce v0.0.0-20201202032136-da104fdcda2c h1:h4ktBwlMHdD/JAU8REVBbfpS+NMMvh2IY7D1PfoT71g=
-github.com/tw-bc-group/zhonghuan-ce v0.0.0-20201202032136-da104fdcda2c/go.mod h1:24e7E3Zec5CBPFyHRtRlvWdNxCZIEvox/g3VZuOLsZk=
 github.com/tw-bc-group/zhonghuan-ce v0.0.0-20201202033808-e0dd07d946ea h1:IWZ0dRhGze0HCfhHvILSgYVXJ11oeBR6jps7KCOp6+Q=
 github.com/tw-bc-group/zhonghuan-ce v0.0.0-20201202033808-e0dd07d946ea/go.mod h1:24e7E3Zec5CBPFyHRtRlvWdNxCZIEvox/g3VZuOLsZk=
 github.com/ugorji/go v1.1.1/go.mod h1:hnLbHMwcvSihnDhEfx2/BzKp2xb0Y+ErdfYcrs9tkJQ=

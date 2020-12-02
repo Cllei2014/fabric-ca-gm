@@ -244,6 +244,12 @@ func (c *Client) Enroll(req *api.EnrollmentRequest) (*EnrollmentResponse, error)
 	if strings.ToLower(req.Type) == "idemix" {
 		return c.handleIdemixEnroll(req)
 	}
+
+	// Rewrite to use zhuang ce generate key
+	if req.CSR.KeyRequest.Algo == "gmsm2" {
+		req.CSR.KeyRequest.Algo = "gmsm2_ce"
+	}
+
 	return c.handleX509Enroll(req)
 }
 
