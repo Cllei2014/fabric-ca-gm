@@ -301,6 +301,7 @@ dist/linux-s390x:
 
 .PHONY: clean
 clean: docker-clean release-clean
+	-@chmod -R +w build
 	-@rm -rf build bin ||:
 
 .PHONY: clean-all
