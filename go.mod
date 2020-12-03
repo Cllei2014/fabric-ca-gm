@@ -43,7 +43,7 @@ require (
 	github.com/spf13/viper v1.0.1-0.20171207042631-1a0c4a370c3e
 	github.com/stretchr/testify v1.6.1
 	github.com/tw-bc-group/aliyun-kms v0.1.1
-	github.com/tw-bc-group/fabric-gm v0.0.0-20201203021432-255a365fc335
+	github.com/tw-bc-group/fabric-gm v0.0.0-20201203082348-8f8213bf42c0
 	github.com/tw-bc-group/net-go-gm v0.0.0-20201029102405-17a5e22cadaa
 	github.com/tw-bc-group/zhonghuan-ce v0.1.1-hotfix
 	golang.org/x/crypto v0.0.0-20201012173705-84dcc777aaee
