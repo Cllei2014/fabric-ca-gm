@@ -264,8 +264,12 @@ github.com/tedsuo/ifrit v0.0.0-20180802180643-bea94bb476cc/go.mod h1:eyZnKCc955u
 github.com/tmc/grpc-websocket-proxy v0.0.0-20170815181823-89b8d40f7ca8/go.mod h1:ncp9v5uamzpCO7NfCPTXjqaC+bZgJeR0sMTm6dMHP7U=
 github.com/tw-bc-group/aliyun-kms v0.0.0-20201126132256-b9c99bba772d h1:r6OsvTtWJ2b9TJ+YSzskl7EtrKbSiN/q/p78zaSv4Jc=
 github.com/tw-bc-group/aliyun-kms v0.0.0-20201126132256-b9c99bba772d/go.mod h1:GONQ2w384Dql01scA2vMwBv+9Vw/RIQRy2sCuAoLQ6k=
+github.com/tw-bc-group/aliyun-kms v0.1.1 h1:4IS/8YfZ19oXMjBKFouKxksLh6w2yz3ojRHiGHcbnHk=
+github.com/tw-bc-group/aliyun-kms v0.1.1/go.mod h1:GONQ2w384Dql01scA2vMwBv+9Vw/RIQRy2sCuAoLQ6k=
 github.com/tw-bc-group/fabric-gm v0.0.0-20201202033848-ff55158d018e h1:kVvAloFnK3cBhVVTslP5JpdaBubFBUvMIvZUJCwAQpg=
 github.com/tw-bc-group/fabric-gm v0.0.0-20201202033848-ff55158d018e/go.mod h1:eTZjDqH+smLk7ucYWbfgWr/Gqbdxw/ikN6QZcJr8/FQ=
+github.com/tw-bc-group/fabric-gm v0.0.0-20201203021432-255a365fc335 h1:VXQrT5bKeg6p0gIU93TDyj+fd5BAGoL5icKVshP2vEQ=
+github.com/tw-bc-group/fabric-gm v0.0.0-20201203021432-255a365fc335/go.mod h1:nm0sCpofTwx3O1Uf7TcTTVp8utCpNUPcGert/ghoh7Q=
 github.com/tw-bc-group/net-go-gm v0.0.0-20201029102405-17a5e22cadaa h1:fCeVBt9bkKzOejVk+1TEIgluFyuKSmLoFR7jH5L+QXo=
 github.com/tw-bc-group/net-go-gm v0.0.0-20201029102405-17a5e22cadaa/go.mod h1:2oAK+CcT1dFBZ+8KVNJdBUbrcGo2+eniuu24WBQt5JU=
 github.com/tw-bc-group/sarama v0.0.0-20201110085058-851d51e29742/go.mod h1:L/DCuMbRNYoj2JksrP2UJRTTsLdktr58Q9pIgNmH8cA=
