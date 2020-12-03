@@ -273,6 +273,8 @@ github.com/tw-bc-group/tjfoc-gm v0.0.0-20201126034628-7141b2053e0e h1:Y+Ch19lrgd
 github.com/tw-bc-group/tjfoc-gm v0.0.0-20201126034628-7141b2053e0e/go.mod h1:pjo29FaEP0cii6emm2Lw/+3UZxO2SGQrUXntmKUD37U=
 github.com/tw-bc-group/zhonghuan-ce v0.0.0-20201202033808-e0dd07d946ea h1:IWZ0dRhGze0HCfhHvILSgYVXJ11oeBR6jps7KCOp6+Q=
 github.com/tw-bc-group/zhonghuan-ce v0.0.0-20201202033808-e0dd07d946ea/go.mod h1:24e7E3Zec5CBPFyHRtRlvWdNxCZIEvox/g3VZuOLsZk=
+github.com/tw-bc-group/zhonghuan-ce v0.1.1 h1:bOiH9Pr0+xYIIo4tclfTEmRK4GxAqu6DwYeBgQdiNX4=
+github.com/tw-bc-group/zhonghuan-ce v0.1.1/go.mod h1:24e7E3Zec5CBPFyHRtRlvWdNxCZIEvox/g3VZuOLsZk=
 github.com/ugorji/go v1.1.1/go.mod h1:hnLbHMwcvSihnDhEfx2/BzKp2xb0Y+ErdfYcrs9tkJQ=
 github.com/urfave/cli v1.18.0/go.mod h1:70zkFmudgCuE/ngEzBv17Jvp/497gISqfk5gWijbERA=
 github.com/vishvananda/netlink v1.0.0/go.mod h1:+SR5DhBJrl6ZM7CoCKvpw5BKroDKQ+PJqOg65H/2ktk=
