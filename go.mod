@@ -45,7 +45,7 @@ require (
 	github.com/tw-bc-group/aliyun-kms v0.1.1
 	github.com/tw-bc-group/fabric-gm v0.0.0-20201203021432-255a365fc335
 	github.com/tw-bc-group/net-go-gm v0.0.0-20201029102405-17a5e22cadaa
-	github.com/tw-bc-group/zhonghuan-ce v0.1.1
+	github.com/tw-bc-group/zhonghuan-ce v0.1.1-hotfix
 	golang.org/x/crypto v0.0.0-20201012173705-84dcc777aaee
 	gopkg.in/asn1-ber.v1 v1.0.0-20150924051756-4e86f4367175 // indirect
 	gopkg.in/ldap.v2 v2.5.0
