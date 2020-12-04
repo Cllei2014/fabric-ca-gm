@@ -270,6 +270,8 @@ github.com/tw-bc-group/aliyun-kms v0.1.1 h1:4IS/8YfZ19oXMjBKFouKxksLh6w2yz3ojRHi
 github.com/tw-bc-group/aliyun-kms v0.1.1/go.mod h1:GONQ2w384Dql01scA2vMwBv+9Vw/RIQRy2sCuAoLQ6k=
 github.com/tw-bc-group/fabric-gm v0.0.0-20201203082348-8f8213bf42c0 h1:497HbCOqkqLnT9pLxWtSBI5vJNGg5KVrOHkBe325GNo=
 github.com/tw-bc-group/fabric-gm v0.0.0-20201203082348-8f8213bf42c0/go.mod h1:XHZCW630FZrv26l/Th3s7lgHVAviSX+gPG1ciQANdFA=
+github.com/tw-bc-group/fabric-gm v0.0.0-zh-01.0.20201204085624-639ad5fdad83 h1:AXYi43L0Czy6N/zrV2h+1YtnuLC/BRsXnB9aV1FBij4=
+github.com/tw-bc-group/fabric-gm v0.0.0-zh-01.0.20201204085624-639ad5fdad83/go.mod h1:d5p6k5Z2lUvY20dFNVPuGWH/LUjT3Wm0tCTCX6cz5EI=
 github.com/tw-bc-group/net-go-gm v0.0.0-20201029102405-17a5e22cadaa h1:fCeVBt9bkKzOejVk+1TEIgluFyuKSmLoFR7jH5L+QXo=
 github.com/tw-bc-group/net-go-gm v0.0.0-20201029102405-17a5e22cadaa/go.mod h1:2oAK+CcT1dFBZ+8KVNJdBUbrcGo2+eniuu24WBQt5JU=
 github.com/tw-bc-group/sarama v0.0.0-20201110085058-851d51e29742/go.mod h1:L/DCuMbRNYoj2JksrP2UJRTTsLdktr58Q9pIgNmH8cA=
@@ -277,6 +279,8 @@ github.com/tw-bc-group/tjfoc-gm v0.0.0-20201126034628-7141b2053e0e h1:Y+Ch19lrgd
 github.com/tw-bc-group/tjfoc-gm v0.0.0-20201126034628-7141b2053e0e/go.mod h1:pjo29FaEP0cii6emm2Lw/+3UZxO2SGQrUXntmKUD37U=
 github.com/tw-bc-group/zhonghuan-ce v0.1.1-hotfix h1:2cgh+1QuGfL5Wl46+7TxTtpmNqrIUxPQLGreNamtHoM=
 github.com/tw-bc-group/zhonghuan-ce v0.1.1-hotfix/go.mod h1:24e7E3Zec5CBPFyHRtRlvWdNxCZIEvox/g3VZuOLsZk=
+github.com/tw-bc-group/zhonghuan-ce v0.2.0 h1:DpUe/ko0SoSB67LGYpg1u7MtT9+Sz9VBK4fsgQQNI8Q=
+github.com/tw-bc-group/zhonghuan-ce v0.2.0/go.mod h1:24e7E3Zec5CBPFyHRtRlvWdNxCZIEvox/g3VZuOLsZk=
 github.com/ugorji/go v1.1.1/go.mod h1:hnLbHMwcvSihnDhEfx2/BzKp2xb0Y+ErdfYcrs9tkJQ=
 github.com/urfave/cli v1.18.0/go.mod h1:70zkFmudgCuE/ngEzBv17Jvp/497gISqfk5gWijbERA=
 github.com/vektra/mockery v1.1.2/go.mod h1:VcfZjKaFOPO+MpN4ZvwPjs4c48lkq1o3Ym8yHZJu0jU=
